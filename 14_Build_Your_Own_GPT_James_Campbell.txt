@@ -1,15 +1,16 @@
-Question: In SFTTrainer what does "packing = false" mean?
+Question: In SFTTrainer, what does "packing = false" mean?
 
 Answer: Packing is an optimization technique that concatenates multiple short 
-training examples int a single longer input sequence to match the "max_length" paramter
-for how many tokens a sequence should be. This increases the models efficiency, 
+training examples in a single longer input sequence to match the "max_length" parameter
+for how many tokens a sequence should be. This increases the model's efficiency, 
 makes training faster, and promotes better resource use by preventing the need for padding.
 
 Some reasons to set "packing = false" would be: 
-To avoid unwanted correlation issues due to examples being stored near eachother.
+To avoid unwanted correlation issues due to examples being stored near each other.
 To retain the original structure of the data.
-If a data set has only a few very long examples, packing provides no benifit and is therefor unnecessary.
+If a data set has only a few very long examples, packing provides no benefit and is therefore unnecessary.
 Having "packing = false" gives you more control over preprocessing, tokenization, or sequence formation.
 In some cases, having packing = true can cause compatibility issues or errors.
+
 
 
